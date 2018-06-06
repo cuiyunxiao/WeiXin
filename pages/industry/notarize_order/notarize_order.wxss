@@ -1,0 +1,107 @@
+@import "../../../font.wxss";
+.adresspeople text{
+font-size: 28rpx;
+padding-left: 32rpx;
+
+}
+.adresspeople{
+margin-left: -24rpx
+}
+.people{
+  font-size: 30rpx;
+  margin-left: 20rpx;
+}
+.main-person-address{
+  border-bottom: 20rpx solid #e0dce0;
+  font-size:30rpx;
+  margin-left:-28rpx;
+
+}
+#paytype{
+  padding-right: 50rpx
+}
+.icon-map{
+   margin-left: 30rpx
+}
+.fapiao{
+  font-size: 30rpx;
+
+}
+.invoice text{
+  font-size: 30rpx;
+  padding-left: 32rpx;
+}
+.invoice{
+   border-bottom: 20rpx solid #e0dce0;
+}
+.share{
+  border-bottom: 20rpx solid #e0dce0;
+  height: 150rpx
+}
+.sharetype{
+  position: relative;
+  width: 100%;
+  margin-top: 0rpx
+}
+.radio-group{
+  position: absolute;
+  top:12rpx;
+   font-size: 30rpx;
+  
+ 
+}
+label{
+  padding-left: 170rpx;
+   padding-right: 50rpx;
+   width: 100rpx
+}
+.note{
+    border-bottom: 20rpx solid #e0dce0;
+    height: 100%
+
+}
+.textcontent {
+  width: 99%;
+  height: 200rpx;
+  font-size: 30rpx;
+  word-break: break-all;
+  border:3rpx solid #bbbbbb;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  padding-top: 10px
+}
+.total{
+  margin-top: 30rpx
+}
+.amount{
+display: flex;
+justify-content: space-between
+}
+.lf{
+  margin-left: 30rpx;
+  font-size: 30rpx
+}
+.rg{
+  margin-right: 30rpx;
+ font-size: 30rpx;
+ color: red;
+ font-weight: 550
+}
+button{
+  background-color: #ff9800 ;
+  color: white
+}
+.persontype{
+  position: relative;
+  height: 150rpx;
+  width: 100%;
+    border-top: 3rpx solid #e0dce0;
+  border-bottom: 3rpx solid #e0dce0;
+  margin-top: 0rpx
+}
+.typetitle{
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx ;
+   font-size: 30rpx
+}

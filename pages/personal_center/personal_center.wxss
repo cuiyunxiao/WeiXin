@@ -1,0 +1,54 @@
+/* pages/mine/mine.wxss */
+@import "../../font.wxss";
+.mine-header{
+    display: fixed;
+    width: 100%;
+    height: 250rpx;
+    background-image: url("http://cdn.jisuapp.cn/zhichi_frontend/static/webapp/images/top_bg.jpg");
+}
+.mine-header image{
+    margin-top: 60rpx;
+    margin-left: 50rpx;
+}
+.text-left{
+    position: absolute;
+    margin-top: 50rpx;
+    margin-left: 50rpx;
+    color: white;
+}
+.text-right{
+    position: absolute;
+    margin-top: -9rpx;
+    margin-left: 460rpx;
+    font-size: 62rpx;
+    color:#999999;
+}
+.weui-cells {
+    margin-top: 0rpx;
+    border-top: 18rpx solid #e0dce0;
+    background-color:#f0f0f2;
+}
+.weui-cell {
+    height: 60rpx;
+}
+.weui-cell .weui-cell__hd{
+    margin-top: 30rpx;
+}
+.weui-cell .weui-cell__bd {
+    font-size: 32rpx;
+    margin-left: 20rpx;
+    color: #666666;
+}
+.bottom{
+margin-top: 170rpx;
+margin-left: 52rpx 
+}
+.info{
+  border-bottom: 18rpx solid #e0dce0;
+}
+.close{
+color: red
+}
+.bb{
+  border-bottom: 3rpx solid #e0dce0;
+}

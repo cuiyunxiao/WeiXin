@@ -1,0 +1,139 @@
+<view class="main">
+ <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" 
+        class="list" bindscrolltolower="bindDownLoad"  >
+  <view class="categroy-header">
+    <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchTab" class="cate-list {{current === index?'on':''}}">{{item.name}}</view>
+  </view>
+  <!-- 需求详情页面 -->
+  <view class="container" class="ma-top-120" wx:for="{{orderlist}}" wx:key="index">
+    <!-- 全部需求详情 -->
+    <view class="details" style="display:{{current == 0 ? 'block' : 'none'}}" data-id='{{index}}'>
+      <view class="details-top">
+        <text style='font-weight:700;margin-left: 50rpx;'>{{item.bizType}}</text>
+      </view>
+      <view class="details-title" bindtap='getone' data-id='{{index}}'>
+        <view class='title'>名称：{{item.title}} </view>
+          <view style='font-size:24rpx; margin-left: 30rpx;'> 文件编码：{{item.requireNo}}</view>
+        <view class='title-content'>
+          <text style='color:#929292;font-size:24rpx'>创建：{{item.createTime}}</text>
+          <text style='color:#929292;font-size:24rpx'>提交：{{item.submitTime}}</text>
+        </view>
+        <view class="details-content">
+          <image class="details-image" src='https://image.3dyida.com{{item.attachImg}}'></image>
+          <text class="details-text">{{item.attachName}}</text>
+        </view>
+      </view>
+      <button style="display:{{item.requireStatus == 'dsl'? 'block' : 'none'}};left:500rpx;" bindtap='dispose' data-id='{{index}}'>{{item.requireStatus == "dsl"? '撤回' : ''}}</button>
+       <button style="display:{{item.requireStatus == 'wtj'? 'block' : 'none'}};left:500rpx;" bindtap='dispose' data-id='{{index}}'>{{item.requireStatus == "wtj"? '删除' : ''}}</button>
+       <button style="display:{{item.requireStatus == 'wqr'? 'block' : 'none'}};left:500rpx;" bindtap='getone' data-id='{{index}}'>{{item.requireStatus == "wqr"? '去确认' : '查看详情'}}</button>
+        <!-- <button bindtap='getone' data-id='{{index}}'>查看详情</button> -->
+    </view>
+    <!-- 其他需求状态的内容 -->
+    <view style="display:{{current == 1 ? 'block' : 'none'}}" data-id='{{index}}'>
+      <view class="details" style="display:{{current == 1 ? 'block' : 'none'}}">
+        <view class="details-top">
+          <text style='font-weight:700;margin-left: 50rpx;'>{{item.bizType}}</text>
+        </view>
+        <view class="details-title" bindtap='getone' data-id='{{index}}'>
+          <view class='title'>名称：{{item.title}}  </view>
+            <view style='font-size:24rpx; margin-left: 30rpx;'> 文件编码：{{item.requireNo}}</view>
+          <view class='title-content'>
+            <text style='color:#929292;font-size:24rpx'>创建：{{item.createTime}}</text>
+            <text style='color:#929292;font-size:24rpx'>提交：{{item.submitTime}}</text>
+          </view>
+          <view class="details-content">
+            <image class="details-image" src='https://image.3dyida.com{{item.attachImg}}'></image>
+            <text class="details-text">{{item.attachName}}</text>
+          </view>
+        </view>
+        <button data-id='{{index}}'  bindtap='dispose'style="left:10rpx;" >删除</button>
+         <button data-id='{{index}}'  bindtap='getone' >去提交</button>
+      </view>
+    </view>
+    <view style="display:{{current == 2 ? 'block' : 'none'}}" data-id='{{index}}'>
+      <view class="details" style="display:{{current == 2 ? 'block' : 'none'}}">
+        <view class="details-top">
+          <text style='font-weight:700;margin-left: 50rpx;'>{{item.bizType}}</text>
+        </view>
+        <view class="details-title" bindtap='getone' data-id='{{index}}'>
+          <view class='title'>名称：{{item.title}}</view>
+          <view style='font-size:24rpx; margin-left: 30rpx;'> 文件编码：{{item.requireNo}}</view>
+          <view class='title-content'>
+            <text style='color:#929292;font-size:24rpx'>创建：{{item.createTime}}</text>
+            <text style='color:#929292;font-size:24rpx'>提交：{{item.submitTime}}</text>
+          </view>
+          <view class="details-content">
+            <image class="details-image" src='https://image.3dyida.com{{item.attachImg}}'></image>
+            <text class="details-text">{{item.attachName}}</text>
+          </view>
+        </view>
+        <button data-id='{{index}}'  bindtap='dispose' style="left:500rpx;">撤回</button>
+          <!-- <button data-id='{{index}}'  bindtap='getone' >查看详情</button> -->
+      </view>
+    </view>
+    <view style="display:{{current == 3 ? 'block' : 'none'}}" data-id='{{index}}'>
+      <view class="details" style="display:{{current == 3 ? 'block' : 'none'}}">
+        <view class="details-top">
+          <text style='font-weight:700;margin-left: 50rpx;'>{{item.bizType}}</text>
+        </view>
+        <view class="details-title" bindtap='getone' data-id='{{index}}'>
+          <view class='title'>名称：{{item.title}} </view>
+            <view style='font-size:24rpx; margin-left: 30rpx;'> 文件编码：{{item.requireNo}}</view>
+          <view class='title-content'>
+            <text style='color:#929292;font-size:24rpx'>创建：{{item.createTime}}</text>
+            <text style='color:#929292;font-size:24rpx'>提交：{{item.submitTime}}</text>
+          </view>
+          <view class="details-content">
+            <image class="details-image" src='https://image.3dyida.com{{item.attachImg}}'></image>
+            <text class="details-text">{{item.attachName}}</text>
+           
+          </view>
+        </view>
+         <!-- <button data-id='{{index}}'  bindtap='getone' >查看详情</button> -->
+               <button data-id='{{index}}'  bindtap='getone' style="left:500rpx;">去确认</button>
+      </view>
+    </view>
+    <view style="display:{{current == 4 ? 'block' : 'none'}}" data-id='{{index}}'>
+      <view class="details" style="display:{{current == 4 ? 'block' : 'none'}}">
+        <view class="details-top">
+          <text style='font-weight:700;margin-left: 50rpx;'>{{item.bizType}}</text>
+        </view>
+        <view class="details-title" bindtap='getone' data-id='{{index}}'>
+          <view class='title'>名称：{{item.title}}</view>
+            <view style='font-size:24rpx; margin-left: 30rpx;'> 文件编码：{{item.requireNo}}</view>
+          <view class='title-content'>
+            <text style='color:#929292;font-size:24rpx'>创建：{{item.createTime}}</text>
+            <text style='color:#929292;font-size:24rpx'>提交：{{item.submitTime}}</text>
+          </view>
+          <view class="details-content">
+            <image class="details-image" src='https://image.3dyida.com{{item.attachImg}}'></image>
+            <text class="details-text">{{item.attachName}}</text>
+             <button bindtap='getone'  data-id='{{index}}' style="top:230rpx;">提交订单</button> 
+          </view>
+        </view>
+      </view>
+    </view>
+     <view style="display:{{current == 5 ? 'block' : 'none'}}" data-id='{{index}}'>
+      <view class="details" style="display:{{current == 5 ? 'block' : 'none'}}">
+        <view class="details-top">
+          <text style='font-weight:700;margin-left: 50rpx;'>{{item.bizType}}</text>
+        </view>
+        <view class="details-title" bindtap='getone' data-id='{{index}}'>
+          <view class='title'>名称：{{item.title}}</view>
+          <view style='font-size:24rpx; margin-left: 30rpx;'> 文件编码：{{item.requireNo}}</view>
+          <view class='title-content'>
+            <text style='color:#929292;font-size:24rpx'>创建：{{item.createTime}}</text>
+            <text style='color:#929292;font-size:24rpx'>提交：{{item.submitTime}}</text>
+          </view>
+          <view class="details-content">
+            <image class="details-image" src='https://image.3dyida.com{{item.attachImg}}'></image>
+            <text class="details-text">{{item.attachName}}</text>
+          </view>
+        </view>
+        <button data-id='{{index}}'  bindtap='dispose' style="left:10rpx;">删除</button>
+          <button data-id='{{index}}'  bindtap='getone' >查看原因</button>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+</view>

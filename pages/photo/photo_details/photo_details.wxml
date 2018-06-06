@@ -1,0 +1,26 @@
+<view class="main" style='margin-bottom:-8rpx' wx:for="{{phoScanReqs}}" wx:key="index" data-index="{{index}}">
+  <view class='title' style='margin-top:5rpx'>
+    <text class='title-name'>{{orderlist.bizType}}</text>
+    <text class='title-time'>提交时间：{{orderlist.submitTime}}</text>
+  </view>
+  <view class='info' >
+    <view>打印信息</view>
+     <view class='linecontent ' style='padding-left:28rpx'>需求名称：
+      <text style='font-size:28rpx;color:#949494'>{{orderlist.title}}</text>
+    </view>
+    <view class='linecontent ' style='padding-left:28rpx'>照片数量：
+      <text style='font-size:28rpx;color:#949494'>{{item.photoNum}}</text>
+    </view>
+    <view class='linecontent ' style='padding-left:28rpx'>照片精度：
+      <text style='font-size:28rpx;color:#949494'>普通精度</text>
+    </view>
+  </view>
+   <view class='scanaccount' style="display:{{show == 1 ? 'block' : 'none'}}">
+    <view class='money'>
+      <text style='margin-left:30rpx'>总金额</text>
+      <text style='margin-right:30rpx;color:red;'>未报价</text>
+    </view>
+  </view>
+</view>
+
+<button style="display:{{status == 1 ? 'block' : 'none'}}" bindtap='dispose' data-id='{{index}}'>确认需求</button> 

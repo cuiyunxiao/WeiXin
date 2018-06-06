@@ -1,0 +1,71 @@
+<view class='content'>
+  <view class="mine-header">
+    <image src="../../images/person.jpg" style="width:125rpx;height:125rpx;border-radius:50%;"></image>
+    <text class="text-left">{{accountName}}</text>
+    <text class="text-left bottom">手机号：{{tel}}</text>
+  </view>
+  <view class="weui-cells">
+
+    <view bindtap='mydemand' class='bb'>
+      <view class="weui-cell weui-cell_assess">
+        <view class="weui-cell__hd">
+          <image class="iconfont icon-text" style="width:55rpx;height:65rpx;margin-bottom:30rpx"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <text>我的需求</text>
+          <text class="text-right">></text>
+        </view>
+      </view>
+    </view>
+
+    <view bindtap='myorder' class='bb'>
+      <view class="weui-cell weui-cell_assess">
+        <view class="weui-cell__hd">
+          <image class="iconfont icon-form" style="width:55rpx;height:65rpx;margin-bottom:30rpx"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <text>我的订单</text>
+          <text class="text-right">></text>
+        </view>
+      </view>
+    </view>
+    <view bindtap='myaddress' class='bb'>
+      <view class="weui-cell weui-cell_assess">
+        <view class="weui-cell__hd">
+          <text class="iconfont icon-map" style="width:55rpx;height:65rpx;margin-bottom:30rpx"></text>
+        </view>
+        <view class="weui-cell__bd">
+          <text>收货地址</text>
+          <text class="text-right">></text>
+        </view>
+
+      </view>
+    </view>
+    <view bindtap='mynotice' class='bb'>
+      <view class="weui-cell weui-cell_assess info">
+        <view class="weui-cell__hd">
+          <text class="iconfont icon-remind" style="width:55rpx;height:65rpx;margin-bottom:30rpx"></text>
+        </view>
+        <view class="weui-cell__bd">
+          <text>我的消息</text>
+          <text class="text-right">></text>
+        </view>
+        <view class="weui-cell__ft"></view>
+      </view>
+    </view>
+    <view bindtap='personalset' class='bb'>
+      <view class="weui-cell weui-cell_assess .info">
+        <view class="weui-cell__hd">
+          <image class="iconfont icon-set" style="width:55rpx;height:65rpx;margin-bottom:30rpx"></image>
+        </view>
+        <view class="weui-cell__bd">
+          <text>个人设置</text>
+          <text class="text-right">></text>
+        </view>
+        <view class="weui-cell__ft"></view>
+      </view>
+    </view>
+    <button class="close" bindtap='btnClose' wx:if="{{btwText == '退出登录'}}">{{btwText}}</button>
+    <button class="close" bindtap='btnopen' wx:if="{{btwText == '登录'}}">{{btwText}}</button>
+  </view>
+</view>

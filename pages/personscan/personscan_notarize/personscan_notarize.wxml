@@ -1,0 +1,50 @@
+<view class='title'>
+  <text class='title-name'>{{orderlist.bizType}}</text>
+  <text class='title-time'>提交时间：{{orderlist.submitTime}}</text>
+</view>
+<view class='xuqiutotal'>
+
+  <view>
+    <text>扫描地点：广州市萝岗区科学城科研路3号广州市光机电技术研究院</text>
+  </view>
+  <view>
+    <text style='display:block;'>预约：{{orderlist.bookStime}}</text>
+    <text>扫描：{{orderlist.bookStime}}</text>
+  </view>
+</view>
+<scroll-view class="scroll" scroll-y="true">
+<view class="main" style='margin-bottom:-8rpx' wx:for="{{perScanReqs}}" wx:key="index" data-index="{{index}}" data-id='{{index}}'>
+  <checkbox-group bindchange="checkboxChange" data-id='{{index}}'>
+    <label class="checkbox">
+      <view class="cart-box">
+        <view class="cart-list">
+           <checkbox checked='{{item.selected}}' />
+          <text class='peopletotal'>{{personnum}}人扫描</text>
+          <text class="cart-pro-num">扫描编号：{{orderlist.requireNo}}</text>
+          <text class="cart-pro-name">扫描类型：{{item.scanType == 'qs'? '全身扫描':'趣味扫描'}}</text>
+          <text class="cart-pro-serve">扫描服务：{{item.serviceType== 'person;print'? '扫描打印（提供打印成品和扫描）':'仅扫描'}}</text>
+          <text class="cart-pro-price">单价：{{item.price}}</text>
+          <text class="cart-pro-quantity">数量：{{item.qty}}</text>
+          <!-- <text class="cart-del" bindtap="deleteList" data-index="{{index}}">×</text> -->
+        </view>
+      </view>
+    </label>
+  </checkbox-group>
+</view>
+</scroll-view>
+<view class="cart-footer">
+  <icon wx:if="{{selectAllStatus}}" type="success_circle" color="red" class="total-select" bindtap="selectAll" />
+  <icon wx:else type="circle" color="#fff" class="total-select" bindtap="selectAll" />
+  <text style='margin-left:10rpx;font-size:34rpx;margin-top:20rpx'>全选</text>
+</view>
+<view class='cart-total'>
+  <view>
+    <text class='pl'>总数量</text>
+    <text class='pr'>{{totalquantity}}件</text>
+  </view>
+  <view>
+    <text class='pl'>总金额</text>
+    <text class='pr'>￥{{totalPrice}}</text>
+  </view>
+</view>
+<button data-id='{{index}}' bindtap='notarize'  disabled="{{disabled}}" style="background-color:{{loginBtnBgBgColor}}"   loading="{{btnLoading}}" >{{loginBtnTxt}}</button> 

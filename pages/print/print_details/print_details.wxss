@@ -1,0 +1,135 @@
+.main{
+  border-bottom: 10rpx,solid,#d6d4d6
+}
+.title {
+  margin-top: 10rpx;
+  background-color: #e3e3e3;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 3rpx solid #d6d4d6;
+  display: flex;
+  justify-content: space-around;
+}
+
+.title-name {
+  font-size: 28rpx;
+  color: black;
+}
+
+.title-time {
+  font-size: 28rpx;
+  color: #696969;
+}
+
+.scaninfo {
+  position: relative;
+}
+
+text {
+  font-size: 30rpx;
+}
+
+image {
+  height: 150rpx;
+  width: 150rpx;
+  background-color: red;
+  border: 3rpx solid black;
+}
+
+.scantitle {
+  position: absolute;
+  left:4rpx;
+  top:6rpx;
+}
+
+.scanimg {
+  position: absolute;
+  left: 100rpx;
+  top: 100rpx;
+  float: left
+}
+
+.scancontent {
+  position: absolute;
+  left: 280rpx;
+  top: 10rpx;
+  font-size: 30rpx;
+  width: 100%
+}
+
+.scantime {
+  height: 200rpx;
+  border-bottom: 20rpx solid #e0dce0;
+  border-top: 20rpx solid #e0dce0;
+  position: relative;
+  top: 315rpx;
+}
+
+.yuyue {
+  position: absolute;
+  left: 30rpx;
+}
+
+.yuyueitem1 {
+  font-size: 30rpx;
+  position: absolute;
+  top: 60rpx;
+  left: 100rpx;
+}
+
+.yuyueitem2 {
+  font-size: 30rpx;
+  position: absolute;
+  top: 130rpx;
+  left: 100rpx;
+}
+
+
+
+button {
+ position: fixed;
+ bottom: 200rpx;
+  background-color: #ff9800;
+  width: 100%;
+  color: white;
+}
+.linecontent{
+line-height: 70rpx;
+width: 100%;
+border-bottom: 3rpx solid #ccc8cc
+}
+.info{
+   position: absolute;
+  top:380rpx;
+  font-size: 30rpx;
+  width: 100%
+}
+.fl{
+ padding-left:35rpx;
+
+}
+.line{
+  width: 100%;
+  border: 10rpx solid #ccc8cc;
+  position: absolute;
+  top: 320rpx
+}
+.scanaccount {
+  height: 120rpx;
+  position: relative;
+  top: 736rpx;
+  border-bottom: 10rpx solid #e0dce0;
+  line-height: 50rpx;
+}
+
+.amount {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.money {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+}

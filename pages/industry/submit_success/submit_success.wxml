@@ -1,0 +1,27 @@
+<view class="content">
+
+  <view class="prompt-area">
+    <view>
+      <image class="img-area" src=""></image><text>温馨提示：</text>
+    </view>
+   <text>您的需求提交成功，我们会尽快安排工作人员与您对接，请保持手机通畅</text>
+  </view>
+
+  <view class="interval-area"></view>
+
+  <view class="btn-viewRequire">
+    <button  disabled="{{disabled}}" style="background-color:#D6D6D6"  formType="submit"    
+    bindtap='btnClick1'> 查看需求 </button>
+  </view>
+
+  <view class="btn-goIndex">
+     <button  disabled="{{disabled}}" style="background-color:#ff9800"   formType="submit"
+     bindtap='btnClick2'> 去首页 </button>
+  </view>
+
+  <!-- <view class="btn-confirmRequire">
+    <button  disabled="{{disabled}}" style="background-color:#D6D6D6" formType="submit"  
+     bindtap='btnClick3'> 确认需求 </button>
+  </view> -->
+
+</view>

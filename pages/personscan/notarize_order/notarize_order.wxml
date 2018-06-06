@@ -1,0 +1,67 @@
+<view class='adress' bindtap='adressTo'>
+  <view class='people'>收货人</view>
+  <view class='adresspeople'>
+    <text>{{address.name}}</text>
+    <text>{{address.tel}}</text>
+    <text>{{address.email}}</text>
+    <text style='font-size:50rpx;'>></text>
+  </view>
+  <view class="main-person-address">
+    <image class='iconfont icon-map' style="height:50rpx;width:48rpx;line-height:50rpx;"></image>
+    <text style='padding-top:-20rpx;color:#929292;'>{{address.province}}{{address.city}}{{address.area}}{{address.addressMx}}</text>
+  </view>
+</view>
+<view class='invoice'>
+  <view class='fapiao'>发票</view>
+  <view bindtap='editinvoice'>
+    <text wx:if="{{invoiceway =='p'}}">纸质普通发票</text>
+    <text wx:if="{{invoiceway == 'z'}}">纸质增值发票</text>
+    <text style='margin-left:-10rpx'>{{invoiceTitle}}</text>
+    <text style='margin-left:-10rpx'>{{ personname}}</text>
+     <text style='margin-left:-10rpx'>{{ invoice.account.accountName}}</text>
+    <text style='font-size:50rpx;padding-left: 40rpx;' >></text>
+  </view>
+</view>
+<!-- <view class='share'>
+  <view style='font-size:38rpx;margin-top:20rpx;margin-left:30rpx'>是否作为案例分享</view>
+  <view class="sharetype">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for-items="{{items}}">
+        <radio value="{{item.id}}" checked="{{item.checked}}" id="{{item.id}}" />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+</view> -->
+<view class='note'>
+  <view style='font-size:30rpx;margin-top:20rpx;margin-left:30rpx'>订单备注</view>
+ <textarea class='textcontent' wx:if="{{remarkMsg !== null }}"  bindinput='bindTextArea'>{{remarkMsg}}</textarea>
+  <textarea class='textcontent' wx:else="{{remarkMsg == null }}" placeholder="请录入对核订单备注说明（无特殊要求可不填）" bindinput='bindTextArea'></textarea>
+</view>
+<view class="persontype">
+  <view class="typetitle">选择支付方式</view>
+  <radio-group class="radio-group" style="top:80rpx;">
+    <label class="radio" id="paytype" style="padding-left:14rpx;">
+      <radio checked="true" style="padding-left:60rpx;" />对公转账
+      <radio disabled='true' style="padding-left:60rpx;" />微信支付（暂未开通）
+    </label>
+  </radio-group>
+  <view>
+  </view>
+</view>
+<view class='total' wx:for="{{orderdets}}" wx:key="index" data-id="{{item.id}}">
+  <view class='amount '>
+    <text class='lf'>总数量</text>
+    <text class='rg'>{{item.qty}}</text>
+  </view>
+  <view class='amount'>
+    <text class='lf'>总金额</text>
+    <text class='rg'>{{item.amount}}</text>
+  </view>
+  <view class='amount'>
+    <text class='lf'>总支付</text>
+    <text class='rg'>{{item.amount}}</text>
+  </view>
+</view>
+<label wx:for="{{orderdets}}" wx:key="amount">
+  <button bindtap='payment'>去支付￥{{item.amount}} </button>
+</label>

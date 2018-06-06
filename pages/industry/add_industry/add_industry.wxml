@@ -1,0 +1,39 @@
+<include src="../../common/demand_choice/demand_choice.wxml" />
+<view class='content'>
+  <view>
+    <image class="img" src='https://image.3dyida.com/images/main/industry.png'></image>
+  </view>
+  <view class='contentitle'>
+    工业设计需求
+  </view>
+  <view class="personcount">
+    <text class="persontitle">设计主题</text>
+    <input class='inputname' placeholder='请输入设计主题' bindinput='bindinput'></input>
+  </view>
+  <view class="persontype">
+    <textarea class='textcontent' placeholder='请输入具体的工业设计需求，包括但不限于产品基本情况，功能，用途，应用领域，风格，尺寸，方案数量以及参考方案等' bindinput='bindTextArea'> </textarea>
+
+
+  </view>
+  <!-- 添加图片 -->
+  <view class="b_d" style='  height: 100%;  '>
+    <view class="weui-cells__title">上传图片/{{imageList.length}}</view>
+    <view class="weui-cells weui-cells_after-title" style='background-color:#f0f0f2;height:100%;width:100%'>
+      <view class="weui-uploader__bd">
+        <view class="weui-uploader__files">
+          <block wx:for="{{imageList}}" wx:for-item="image">
+            <view class="weui-uploader__file">
+              <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+              <view class="del-img" data-src="{{image}}" bindtap="delImage">删除</view>
+            </view>
+          </block>
+        </view>
+        <view class="weui-uploader__input-box" wx:if="{{!(imageList.length == 9)}}">
+          <view class="weui-uploader__input" bindtap="chooseImage"></view>
+        </view>
+      </view>
+    </view>
+     <button  disabled="{{disabled}}" style="background-color:{{loginBtnBgBgColor}};width:40%; margin-bottom:40rpx;height:80rpx" loading="{{btnLoading}}" bindtap='Confirmupload'>{{loginBtnTxt}}</button>
+  </view>
+</view>
+<button bindtap='submitFun' disabled="{{disableds}}" style="background-color:{{loginBtnBgBgColors}}">提交需求</button>

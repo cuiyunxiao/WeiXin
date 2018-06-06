@@ -1,0 +1,88 @@
+
+.content {
+ text-align: center;
+}
+.prompt-area{
+font-size: 30rpx;
+height: 100%;
+width: 530rpx;
+margin-top: 50rpx;
+margin-left: 65rpx;
+border: 4rpx solid #CECECE;
+padding: 45rpx;
+}
+
+.img-area{
+  margin-left: -300rpx;
+  width: 30rpx;
+  height: 30rpx;
+  background-color: rebeccapurple;
+}
+
+
+.btn-viewOrder{
+ margin-top: 40rpx;
+ width: 90%;
+ margin-left: 40rpx;
+}
+
+.interval-area{
+  margin-top: 30rpx;
+  height: 75rpx;
+  width: 100%;
+  background-color:#E0dCE0
+}
+
+
+
+.categroy-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+}
+
+.categroy-header  view {
+  font-size: 37rpx;
+  margin-bottom: 15rpx;
+}
+
+.categroy-header {
+  border-bottom: 5rpx solid #e0dce0;
+}
+
+.categroy-header .cate-list.on {
+  color: #ff9800;
+  border-bottom: 6rpx solid #ff9800;
+}
+
+.title {
+  font-size: 32rpx;
+  margin-top: 10rpx;
+  text-align: left;
+  padding-left: 25rpx;
+  margin: 20rpx;
+
+  
+}
+
+.title-content {
+  text-align: left;
+  padding-left: 50rpx;
+}
+
+.txt-area {
+  padding: 30rpx;
+}
+
+.button1{
+text-align: left;
+margin-left: -350rpx;
+}
+
+.button2{
+position: relative;
+  margin-top: -82rpx;
+  margin-left: 250rpx;
+}

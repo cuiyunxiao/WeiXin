@@ -1,0 +1,133 @@
+.content {
+  text-align: center;
+}
+
+.img-area {
+  margin-left: -300rpx;
+  width: 30rpx;
+  height: 30rpx;
+  background-color: rebeccapurple;
+}
+
+.btn-viewOrder {
+  margin-top: 40rpx;
+  width: 90%;
+  margin-left: 40rpx;
+}
+
+.categroy-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  box-sizing: border-box;
+  margin-top: 30rpx;
+}
+
+.categroy-header  view {
+  font-size: 30rpx;
+  margin-bottom: 15rpx;
+}
+
+.categroy-header {
+  border-bottom: 15rpx solid #e0dce0;
+  height: 150rpx;
+}
+
+.categroy-header .cate-list {
+  border: 5rpx solid #bbb;
+  height: 60rpx;
+  line-height: 60rpx;
+  width: 40%;
+}
+
+.categroy-header .cate-list.on {
+  color: #e51c23;
+  border: 3rpx solid #e51c23;
+}
+
+.title {
+  font-size: 32rpx;
+  height: 80rpx;
+  line-height: 90rpx;
+  border-bottom: 3rpx solid #e0dce0;
+  text-align: left;
+  padding-left: 20rpx;
+}
+
+.title-content {
+  text-align: left;
+  padding-left: 50rpx;
+}
+
+.txt-area {
+  padding: 30rpx;
+}
+
+.button1 {
+  text-align: left;
+  margin-left: -350rpx;
+}
+
+.button2 {
+  position: relative;
+  margin-top: -82rpx;
+  margin-left: 250rpx;
+}
+
+.way {
+  margin-right: 560rpx;
+  font-size: 30rpx;
+}
+
+.typetitle {
+  margin-right: 560rpx;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+.txt-input {
+  width: 98%;
+  padding-left: 20rpx;
+  background-color: #dedcde;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 3.5%;
+  border: 3rpx solid #bbb;
+  margin-top: 20rpx;
+}
+
+.ma-top-120 {
+  border-bottom: 15rpx solid #e0dce0;
+}
+
+button {
+  width: 95%;
+  background-color: #ff9800;
+  color: white;
+  margin-top: 100rpx;
+}
+
+.item-input {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20rpx
+}
+
+.item-input text {
+  font-size: 30rpx;
+padding-top: 10rpx;
+}
+
+.item-input input {
+  width: 520rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  border-radius: 3.5%;
+  background-color: #dedcde;
+  border: 3rpx solid #bbb;
+}

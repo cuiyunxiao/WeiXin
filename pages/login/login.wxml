@@ -1,0 +1,25 @@
+<view class="content">
+    <view  bindtap="bindViewTap" class="userinfo">
+         <image class="userinfo-avatar" src="{{avatarUrl}}" background-size="cover"></image>
+    </view>
+    <form bindsubmit="formSubmit">
+        <view class="input-area">
+          <view class="input-log">  
+            <text class="userinfo-logIcon iconfont icon-account" src=""></text>  
+            <input id="username" name="username" maxlength='11'   placeholder="用户名/手机号" />
+          </view>
+          <view class="input-log">
+            <text class="userinfo-logIcon iconfont icon-password" src=""></text>  
+            <input id="password" name="password" maxlength='20' type="password" placeholder="密码" />
+          </view>
+        </view>
+        <view class="btn-area">
+            <button  disabled="{{disabled}}" style="background-color:{{loginBtnBgBgColor}}"   formType="submit"  loading="{{btnLoading}}" > {{loginBtnTxt}} </button>
+            <view class="txt-area">
+                <navigator redirect url="../findnum/findnum"><text class="forgot-password">忘记密码？</text></navigator>
+                <navigator redirect url="../register/register"><text class="register">注册账号</text></navigator> 
+            </view>
+        </view>
+    </form>
+</view>
+

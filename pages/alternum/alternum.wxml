@@ -1,0 +1,25 @@
+<view class="content">
+  <view class="logo">
+    <text class="welcome">修改手机号码</text>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class="input-area first">
+
+      <view class="input-log">
+        <image class="userinfo-logIcon iconfont icon-mobilephone" ></image>
+        <input id="username" name="username" maxlength='11' type="text" placeholder="手机号" bindinput="setTelPhone" />
+      </view>
+      <view class="smsCode">
+        <text class="userinfo-logIcon iconfont  icon-security"></text>
+        <input id="smsCode" name="smsCode" bindinput='setSmsCode' maxlength='4' type="text" placeholder="验证码" />
+        <button bindtap="getSmsCode" disabled="{{smsCodeDisabled}}" style="background-color:{{getSmsCodeBtnColor}}" class="getSmsCodeBtn">{{getSmsCodeBtnTxt}}</button>
+      </view>
+    </view>
+    <view class="btn-area">
+      <button disabled="{{registDisabled}}" style="background-color:{{registBtnBgBgColor}}" formType="submit" loading="{{btnLoading}}"> {{registBtnTxt}} </button>
+      <view class="txt-area">
+        
+      </view>
+    </view>
+  </form>
+</view>

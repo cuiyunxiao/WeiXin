@@ -1,0 +1,76 @@
+<include src="../../common/demand_choice/demand_choice.wxml" />
+<view class='content'>
+  <view>
+    <image class="img" src='https://image.3dyida.com/images/main/person.png'></image>
+  </view>
+  <view class='contentitle'>
+    人物扫描需求
+  </view>
+  <view class="personcount">
+    <text class="persontitle">扫描人数</text>
+    <view class="stepper">
+      <!-- 减号 -->
+      <text class="{{minusStatus}}" bindtap="bindMinus">-</text>
+      <!-- 数值 -->
+      <input type="number" bindchange="bindManual" value="{{num}}" />
+      <!-- 加号 -->
+      <text class="normal" bindtap="bindPlus">+</text>
+    </view>
+  </view>
+  <view class="persontype">
+    <view class="typetitle">选择扫描类型</view>
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for-items="{{items}}">
+        <radio value="{{item.id}}" checked="{{item.checked}}" id="{{item.id}}" />{{item.value}}
+      </label>
+    </radio-group>
+    <view>
+    </view>
+
+  </view>
+  <!-- 服务类型 -->
+  <view class="b_d">
+    <view class="weui-cell weui-cell_assess info">
+      <view class="weui-cell__bd">
+        <text class="text-right" style='right:20rpx;top:2rpx'>></text>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            <text> 服务类型：</text>
+            <text style='color: #666'>{{array[index]}}</text>
+          </view>
+        </picker>
+      </view>
+      <view class="weui-cell__ft"></view>
+    </view>
+  </view>
+  <view>
+  </view>
+  <view class="yuyue">
+    <view class="b_d" style='border-bottom:3rpx solid  #e0dce0 '>
+      <view class="weui-cell weui-cell_assess info">
+        <view class="weui-cell__bd">
+          <text> 扫描地点：</text>
+          <text style='  color: #666'>广州光机电技术研究院</text>
+        </view>
+        <view class="weui-cell__ft"></view>
+      </view>
+    </view>
+    <view class="b_d" style='border-bottom:3rpx solid  #e0dce0 ' catchtap="selectConTime">
+      <view class="weui-cell weui-cell_assess info" catchtap="selectConTime">
+        <view class="weui-cell__bd">
+          <text class="text-right" style='right:20rpx;top:2rpx'>></text>
+          <picker mode="date" value="{{date}}" start="2018-01-01" end="2028-01-01" bindchange="binddateChange">
+            <view class="picker">
+              <text>预约时间：</text>
+              <text style='  color: #666'>{{date}} </text>
+            </view>
+          </picker>
+        </view>
+        <view class="weui-cell__ft"></view>
+      </view>
+    </view>
+    <view>
+    </view>
+  </view>
+</view>
+<button bindtap='comfig' disabled="{{disableds}}" style="background-color:{{loginBtnBgBgColors}}">提交需求</button>

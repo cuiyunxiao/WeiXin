@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="first-img">
+    <image src="{{firstimgUrl}}"></image>
+  </view>
+  <view class="second-img" >
+    <image src="{{secondimg}}" ></image>
+  </view>
+  <view class="business-img" bindtap="goentity">
+    <image src='{{scan}}'></image>
+  </view>
+  <view class="business-img" bindtap="goindustry" >
+    <image src='{{sheji}}'></image>
+  </view>
+  <view class="business-img" bindtap="goprint">
+    <image src='{{dayin}}'></image>
+  </view>
+  <view class="business-img" bindtap="gomoulds" >
+    <image src='{{moju}}'></image>
+  </view>
+  <view class="bottom-content">
+    <view class="bottom-title">
+      联系我们
+    </view>
+    <view class="bottom-list">
+      <view class="bottom-list-content">广州市光机电技术研究院</view>
+      <view class="bottom-list-content">地址：广州市萝岗区科学城科研路3号</view>
+      <view class="bottom-list-content">电话：020-3206 8941</view>
+      <view class="bottom-list-content">QQ：1951611143</view>
+      <view class="bottom-list-content">邮箱：gjd3dcloud@163.com</view>
+      <button bindtap="calling">拨打电话</button>
+    </view>
+
+  </view>
+  <view class="bottom-line"></view>
+</view>

@@ -1,0 +1,134 @@
+<view class="main">
+ <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" 
+        class="list" bindscrolltolower="bindDownLoad"  >
+  <view class="categroy-header">
+    <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchTab" class="cate-list {{current === index?'on':''}}">{{item.name}}</view>
+  </view>
+  <!-- 需求详情页面 -->
+  <view class="container" class="ma-top-120" wx:for="{{orderlist}}" wx:key="index">
+    <!-- 全部需求详情 -->
+    <view class="details" style="display:{{current == 0 ? 'block' : 'none'}}" bindtap='getone' data-id='{{index}}'>
+      <view class="details-top">
+        <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'industry'}}">工业设计</text>
+        <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'entity'}}">实物扫描</text>
+        <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'person'}}">人像扫描</text>
+        <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'photo'}}">照片建模</text>
+        <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'mudle'}}">模具制造</text>
+        <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'print'}}">3D打印</text>
+        <text  style="display:{{status == 1 ? 'block' : 'none'}};margin-right:50rpx;margin-left: 330rpx;color:#2b80ff">待支付</text>
+      </view>
+      <view class="details-title">
+        <view class='title' wx:for="{{item.orderdets}}" wx:key="index">名称：{{item.productName}}</view>
+        <view class='title-content'>
+          <text style='color:#929292;font-size:24rpx' wx:for="{{item.orderdets}}" wx:key="index">提交：{{item.createTime}}</text>
+        </view>
+        <view class="details-content">
+          <image class="details-image" src='https://image.3dyida.com/images/common/{{item.bizCode}}.jpg'></image>
+          <text class="details-text">{{item.accountName}}</text>
+          <button style="display:{{status == 1 ? 'block' : 'none'}}">付款</button>
+        </view>
+      </view>
+    </view>
+    <!-- 其他需求状态的内容 -->
+    <view style="display:{{current == 1 ? 'block' : 'none'}}">
+      <view class="details" style="display:{{current == 1 ? 'block' : 'none'}}" bindtap='getone' data-id='{{index}}'>
+        <view class="details-top">
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'industry'}}">工业设计</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'entity'}}">实物扫描</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'person'}}">人像扫描</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'photo'}}">照片建模</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'mudle'}}">模具制造</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'print'}}">3D打印</text>
+          <text style='margin-right:50rpx;margin-left: 330rpx;color:#2b80ff' style="display:{{status == 1 ? 'block' : 'none'}}">待支付</text>
+        </view>
+        <view class="details-title">
+          <view class='title' wx:for="{{item.orderdets}}">名称：{{item.productName}}</view>
+          <view class='title-content'>
+            <text style='color:#929292;font-size:24rpx' wx:for="{{item.orderdets}}">提交：{{item.createTime}}</text>
+          </view>
+          <view class="details-content">
+            <image class="details-image" src='https://image.3dyida.com/images/common/{{item.bizCode}}.jpg'></image>
+            <text class="details-text">{{item.accountName}}</text>
+            <button style="display:{{status == 1 ? 'block' : 'none'}}">付款</button>
+          </view>
+        </view>
+
+      </view>
+    </view>
+    <view style="display:{{current == 2 ? 'block' : 'none'}}">
+      <view class="details" style="display:{{current == 2 ? 'block' : 'none'}}" bindtap='getone' data-id='{{index}}'>
+        <view class="details-top">
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'industry'}}">工业设计</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'entity'}}">实物扫描</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'person'}}">人像扫描</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'photo'}}">照片建模</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'mudle'}}">模具制造</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'print'}}">3D打印</text>
+          <text style='margin-right:50rpx;margin-left: 330rpx;color:#2b80ff'></text>
+        </view>
+        <view class="details-title">
+          <view class='title' wx:for="{{item.orderdets}}">名称：{{item.productName}}</view>
+          <view class='title-content'>
+            <text style='color:#929292;font-size:24rpx' wx:for="{{item.orderdets}}">提交：{{item.createTime}}</text>
+          </view>
+          <view class="details-content">
+            <image class="details-image" src='https://image.3dyida.com/images/common/{{item.bizCode}}.jpg'></image>
+            <text class="details-text">{{item.accountName}}</text>
+             <button catchtap='cuidan' data-id='{{index}}'>去催单</button> 
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style="display:{{current == 3 ? 'block' : 'none'}}">
+      <view class="details" style="display:{{current == 3 ? 'block' : 'none'}}" bindtap='getone' data-id='{{index}}'>
+        <view class="details-top">
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'industry'}}">工业设计</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'entity'}}">实物扫描</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'person'}}">人像扫描</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'photo'}}">照片建模</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'mudle'}}">模具制造</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'print'}}">3D打印</text>
+          <text style='margin-right:50rpx;margin-left: 330rpx;color:#2b80ff'></text>
+        </view>
+        <view class="details-title">
+          <view class='title' wx:for="{{item.orderdets}}">名称：{{item.productName}}</view>
+          <view class='title-content'>
+
+            <text style='color:#929292;font-size:24rpx' wx:for="{{item.orderdets}}">提交：{{item.createTime}}</text>
+          </view>
+          <view class="details-content">
+            <image class="details-image" src='https://image.3dyida.com/images/common/{{item.bizCode}}.jpg'></image>
+            <text class="details-text">{{item.accountName}}</text>
+             <button bindtap='getone' data-id='{{index}}'>去确认</button> 
+          </view>
+        </view>
+      </view>
+    </view>
+    <view style="display:{{current == 4 ? 'block' : 'none'}}">
+      <view class="details" style="display:{{current == 4 ? 'block' : 'none'}}" bindtap='getone' data-id='{{index}}'>
+        <view class="details-top">
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'industry'}}">工业设计</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'entity'}}">实物扫描</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'person'}}">人像扫描</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'photo'}}">照片建模</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'mudle'}}">模具制造</text>
+          <text style='font-weight:700;margin-left: 50rpx;' wx:if="{{item.bizCode == 'print'}}">3D打印</text>
+          <text style='margin-right:50rpx;margin-left: 330rpx;color:#2b80ff'></text>
+        </view>
+        <view class="details-title">
+          <view class='title' wx:for="{{item.orderdets}}">名称：{{item.productName}}</view>
+          <view class='title-content'>
+            <text style='color:#929292;font-size:24rpx' wx:for="{{item.orderdets}}">提交：{{item.createTime}}</text>
+          </view>
+          <view class="details-content">
+            <image class="details-image"src='https://image.3dyida.com/images/common/{{item.bizCode}}.jpg'></image>
+            <text class="details-text">{{item.accountName}}</text>
+            <!-- <button>付款</button> -->
+          </view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  </scroll-view>
+</view>

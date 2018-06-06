@@ -1,0 +1,44 @@
+@import "../login/login.wxss";
+@import "../../font.wxss";
+.smsCode {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+  padding-right: 10%;
+}
+
+.smsCode input {
+  width: 336rpx;
+}
+
+.smsCode .getSmsCodeBtn {
+  font-size: 30rpx;
+  color: #fff;
+  width: 216rpx;
+  box-sizing: border-box;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-top: 10rpx;
+  margin-right: 0;
+}
+.logo{
+margin-top: 80rpx;
+margin-bottom:80rpx
+
+}
+.first{
+border-top: 0px solid #fff;
+
+}
+checkbox-group{
+  margin-top: 20rpx;
+}
+checkbox{
+  margin-left: 30rpx;
+}
+.register{
+margin-top:100rpx;
+margin-left: 180rpx;
+color: black
+
+}

@@ -1,0 +1,65 @@
+<include src="../../common/demand_choice/demand_choice.wxml" />
+<view class='content' style="display:{{show == 0 ? 'block' : 'none'}}">
+  <view>
+    <image class="img" src='https://image.3dyida.com/images/main/entity.png'></image>
+  </view>
+  <view class='contentitle'>
+    实物扫描需求
+  </view>
+  <view class="personcount">
+    <text class="persontitle">实物名称</text>
+    <input class='inputname' placeholder='请输入实物名称' bindinput='bindinput'></input>
+  </view>
+  <view class="persontype">
+    <textarea class='textcontent' placeholder='请录入实物描述信息(如实物尺寸等)以及扫描需求' bindinput='bindTextArea'> </textarea>
+  </view>
+  <!-- 添加图片 -->
+  <view class="b_d" style='  height: 100%;  '>
+    <view class="weui-cells__title">上传图片/{{imageList.length}}</view>
+    <view class="weui-cells weui-cells_after-title" style='background-color:#f0f0f2;height:100%;width:100%'>
+      <view class="weui-uploader__bd">
+        <view class="weui-uploader__files">
+          <block wx:for="{{imageList}}" wx:for-item="image" wx:index="key">
+            <view class="weui-uploader__file">
+              <image class="weui-uploader__img" src="{{image}}" data-src="{{image}}" bindtap="previewImage"></image>
+              <view class="del-img" data-src="{{image}}" bindtap="delImage">删除</view>
+               <!-- <view class="upflag"  wx:for="{{attachArr}}"  style='display:{{item =={{obj[item.]}}?"block":"none"}}'></view>  -->
+                <!-- <view class="upnoflag"  wx:for="{{attachArr}}" wx:if="{{item !=='entity'}}"></view> -->
+            </view>
+          </block>
+        </view>
+        <view class="weui-uploader__input-box" wx:if="{{!(imageList.length == 30)}}">
+          <view class="weui-uploader__input" bindtap="chooseImage"></view>
+        </view>
+      </view>
+    </view>
+    <button  disabled="{{disabled}}" style="background-color:{{loginBtnBgBgColor}};width:40%; margin-bottom:40rpx;height:80rpx" loading="{{btnLoading}}" bindtap='Confirmupload'>{{loginBtnTxt}}</button>
+  </view>
+  <view class="yuyue">
+    <view class="b_d" style='border-bottom:3rpx solid  #e0dce0 '>
+      <view class="weui-cell weui-cell_assess info">
+        <view class="weui-cell__bd">
+          <text> 扫描地点：</text>
+          <text style='  color: #666'>广州光机电技术研究院</text>
+        </view>
+        <view class="weui-cell__ft"></view>
+      </view>
+    </view>
+    <view class="b_d" style='border-bottom:3rpx solid  #e0dce0 '>
+      <view class="weui-cell weui-cell_assess info">
+        <view class="weui-cell__bd">
+          <text class="text-right" style='right:20rpx;top:2rpx'>></text>
+          <picker mode="date" value="{{date}}" start="2018-01-01" end="2028-01-01" bindchange="bindDateChange">
+            <view class="picker">
+              预约时间: {{date}}
+            </view>
+          </picker>
+        </view>
+        <view class="weui-cell__ft"></view>
+      </view>
+    </view>
+    <view>
+    </view>
+  </view>
+</view>
+<button bindtap='submitFun' disabled="{{disableds}}" style="background-color:{{loginBtnBgBgColors}}">提交需求</button>

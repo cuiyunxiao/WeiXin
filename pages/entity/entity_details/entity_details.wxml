@@ -1,0 +1,49 @@
+<view class="main" style='margin-bottom:714rpx' wx:for="{{entityReqs}}" wx:key="index" data-index="{{index}}">
+  <view class='title'>
+    <text class='title-name'>{{orderlist.bizType}}</text>
+    <text class='title-time'>提交时间：{{orderlist.submitTime}}</text>
+  </view>
+  <view >
+    <view class='scaninfo' data-id="{{item.id}}">
+      <text class='scantitle'>文件信息</text>
+      <image class='scanimg' src='https://image.3dyida.com{{item.attachImg}}'></image>
+      <view class='scancontent'>
+       <view class='linecontent'>需求名字
+          <text style='font-size:28rpx;color:#949494'>{{orderlist.title}}</text>
+        </view>
+        <view class='linecontent'>尺寸
+          <text style='font-size:28rpx;color:#949494'>{{item.size}}</text>
+        </view>
+         <view class='linecontent'>需求描述
+          <text style='font-size:28rpx;color:#949494'>{{item.note}}</text>
+        </view>
+         <view class='linecontent' style='margin-left:-224rpx'>扫描地点
+          <text style='font-size:28rpx;color:#949494'>{{item.address}}</text>
+        </view>
+      </view>
+      <view class='line' style='top:368rpx'></view>
+      <!-- <view class='info'>
+        <view>打印信息</view>
+         <view class='linecontent ' style='padding-left:28rpx'>材料
+          <text style='font-size:28rpx;color:#949494'>{{item.material.name}}</text>
+        </view>
+        <view class='linecontent fl'>
+          <text> 颜色：</text>
+          <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.color}}</text>
+          <text style='padding-left:50rpx'>填充：</text>
+          <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.isfill == 0 ? '空心' : '实心'}}</text>
+        </view>
+        <view class='linecontent fl '>
+          <text>加工工艺：</text>
+          <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.material.characteristic}}</text>
+          <text style='padding-left:50rpx'>是否小批量</text>
+          <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.isBatch == 0 ? '否':'是'}}</text>
+        </view>
+        <view class='linecontent ' style='padding-left:28rpx'>备注
+          <text style='font-size:28rpx;color:#949494'></text>
+        </view>
+      </view> -->
+    </view>
+  </view>
+</view>
+   <button style="display:{{status == 1 ? 'block' : 'none'}}" bindtap='dispose' data-id='{{index}}'>确认需求</button> 

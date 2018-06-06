@@ -1,0 +1,177 @@
+.title {
+  margin-top: 10rpx;
+  background-color: #e3e3e3;
+  height: 70rpx;
+  line-height: 70rpx;
+  border: 3rpx solid #d6d4d6;
+  display: flex;
+  justify-content: space-around;
+}
+
+.title-name {
+  font-size: 28rpx;
+  color: black;
+}
+
+.title-time {
+  font-size: 28rpx;
+  color: #696969;
+}
+
+.scaninfo {
+  position: relative;
+}
+
+text {
+  font-size: 30rpx;
+}
+
+image {
+  height: 150rpx;
+  width: 150rpx;
+  background-color: red;
+  border: 3rpx solid black;
+}
+
+.scantitle {
+  position: absolute;
+  left: 5rpx;
+  
+}
+
+.scanimg {
+  position: absolute;
+  left: 110rpx;
+  top: 70rpx;
+  float: left;
+}
+
+.scancontent {
+  position: absolute;
+  left: 300rpx;
+  top: 10rpx;
+  font-size: 30rpx;
+  width: 100%;
+}
+
+.scantime {
+  height: 200rpx;
+  border-bottom: 20rpx solid #e0dce0;
+  border-top: 20rpx solid #e0dce0;
+  position: relative;
+  top: 315rpx;
+}
+
+.yuyue {
+  position: absolute;
+  left: 30rpx;
+}
+
+.yuyueitem1 {
+  font-size: 30rpx;
+  position: absolute;
+  top: 60rpx;
+  left: 100rpx;
+}
+
+.yuyueitem2 {
+  font-size: 30rpx;
+  position: absolute;
+  top: 130rpx;
+  left: 100rpx;
+}
+
+button {
+  bottom: 7rpx;
+  background-color: #ff9800;
+  width: 100%;
+  color: white;
+}
+
+.linecontent {
+  line-height: 70rpx;
+  width: 100%;
+  border-bottom: 3rpx solid #ccc8cc;
+}
+
+.info {
+  position: absolute;
+  top: 380rpx;
+  font-size: 30rpx;
+  width: 100%;
+}
+
+.fl {
+  padding-left: 35rpx;
+}
+
+.line {
+  width: 100%;
+  border: 10rpx solid #ccc8cc;
+  position: absolute;
+  top: 320rpx;
+}
+
+.scanaccount {
+  height: 130rpx;
+  position: relative;
+  top: 540rpx;
+  border-bottom: 10rpx solid #e0dce0;
+  line-height: 60rpx;
+}
+
+.money {
+  display: flex;
+  justify-content: space-between;
+}
+
+.count {
+  display: flex;
+  justify-content: space-between;
+}
+
+checkbox {
+  margin-left: 35rpx;
+  margin-top: 130rpx;
+}
+.main{
+  margin-bottom: 566rpx
+}
+.cart-footer {
+  bottom: 340rpx;
+  left: 0;
+  width: 100%;
+  height: 90rpx;
+  line-height: 90rpx;
+  padding: 0 50rpx 0 30rpx;
+  box-sizing: border-box;
+  color: #696969;
+}
+.total-select {
+  left: 20rpx;
+  top: 18rpx;
+  width: 60rpx;
+  height: 60rpx;
+  color: #3e3e3e;
+}
+.cart-total {
+  left: 10rpx;
+  margin-bottom: 120rpx;
+  height: 100rpx;
+  padding-top: 25rpx;
+  border-top: 5rpx solid #d2d2d3;
+  border-bottom: 5rpx solid #d2d2d3;
+}
+
+.cart-total view {
+  display: flex;
+}
+
+.pl {
+  padding-left: 40rpx;
+}
+
+.pr {
+  padding-left: 480rpx;
+  color: red;
+}

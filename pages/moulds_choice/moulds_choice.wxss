@@ -1,0 +1,10 @@
+@import "../common/demand_choice/demand_choice.wxss";
+@import "../../weui.wxss";
+
+.img {
+  width: 100%;
+  height: 250rpx;
+}
+.content{
+  font-size: 30rpx
+}

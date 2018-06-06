@@ -1,0 +1,41 @@
+<view class="main" style='margin-bottom:714rpx' wx:for="{{entityReqs}}" wx:key="index" data-index="{{index}}"> 
+<view class='title'>
+  <text class='title-name'>{{orderlist.bizType}}</text>
+  <text class='title-time'>提交时间：{{orderlist.submitTime}}</text>
+</view>
+<view class='scaninfo'>
+  <text class='scantitle'>扫描信息</text>
+  <image class='scanimg' src='https://image.3dyida.com{{item.attachImg}}'></image>
+  <view class='scancontent'>
+    <view>实物名称：
+      <text style='font-size:28rpx;color:#949494'>{{orderlist.title}}</text>
+    </view>
+    <view>尺寸：
+      <text style='font-size:28rpx;color:#949494'>{{item.size}}</text>
+    </view>
+    <view>扫描需求：
+      <text style='font-size:28rpx;color:#949494'>{{item.note}}</text>
+    </view>
+  </view>
+</view>
+<view class="scantime">
+  <text class='yuyue'>预约信息</text>
+  <view class='yuyueitem1'>指定地点：
+    <text style='color:#949494;'>{{item.address}}</text>
+  </view>
+  <view class='yuyueitem2'>预约扫描时间：
+    <text style='color:#949494;'>{{orderlist.bookStime}}</text>
+  </view>
+</view>
+<view class='scanaccount'>
+  <view class='amount'>
+    <text style='margin-left:30rpx'>总数量</text>
+    <text style='margin-right:30rpx;color:red;'>{{item.qty}}件</text>
+  </view>
+  <view class='money'>
+    <text style='margin-left:30rpx'>总金额</text>
+    <text style='margin-right:30rpx;color:red;'>￥{{orderlist.ptotal}}</text>
+  </view>
+</view>
+</view>
+<button bindtap='notarize'  disabled="{{disabled}}" style="background-color:{{loginBtnBgBgColor}}"   loading="{{btnLoading}}" >{{loginBtnTxt}}</button> 

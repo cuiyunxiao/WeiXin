@@ -1,0 +1,54 @@
+<view class="editCon">
+  <view class="editCon_row border_b">
+    <text class="text">姓名</text>
+    <input placeholder="联系人姓名" bindinput="input" data-type="name" value="{{init_name}}" />
+  </view>
+  <view class="editCon_row border_b">
+    <text class="text">电话号码</text>
+    <input type="number" placeholder="联系人电话" bindinput="input" data-type="tel" maxlength='11' value="{{init_phone}}" />
+  </view>
+   <view class="editCon_row border_b">
+    <text class="text">邮箱</text>
+    <input placeholder="联系人邮箱" bindinput="input" data-type="email" value="{{init_email}}" />
+  </view>
+  <view class="editCon_row border_b">
+    <text class="text" style="margin-top:2rpx;">地区</text>
+    <view class="container">
+      <view class="input">
+      <view catchtap="open">{{province}}-{{city}}-{{county}}</view>
+        <!--<input placeholder="选择"  value="{{province}}-{{city}}-{{county}}" focus="{{focus}}" bindfocus="open" />-->
+      </view>
+    </view>
+    <text class="arrows"></text>
+  </view>
+  
+  <view class="editCon_row">
+    <text class="text">详细地址</text>
+    <textarea placeholder="请具体到街道门牌号" bindinput="input" data-type="address" value="{{init_address}}" />
+  </view>
+  <radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio" wx:for="{{items}}">
+    <radio value="{{item.name}}" checked="{{item.checked}}"/>{{item.value}}
+  </label>
+</radio-group>
+</view>
+<view class="editBtn" bindtap="confirm">
+  确认
+</view>
+<view wx:if="{{condition}}" class="citypicker">
+  <picker-view indicator-style="height: 50px;" style="width: 100%; height: 300px;" value="{{value}}" bindchange="bindChange" class="citybody">
+    <view class="cityheader">
+      <view bindtap="open" class="city-cancel">取消</view>
+      <view bindtap="open" class="city-true">确定</view>
+    </view>
+    <picker-view-column>
+      <view wx:for="{{provinces}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{countys}}" wx:key="item" style="line-height: 50px;padding-left:10px;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+</view>

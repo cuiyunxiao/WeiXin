@@ -1,0 +1,5 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="container">
+  <!-- 这一块是富文本 显示的内容区 -->
+<template is="wxParse" data="{{wxParseData:article.nodes}}" />
+</view>

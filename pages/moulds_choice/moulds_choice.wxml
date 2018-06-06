@@ -1,0 +1,8 @@
+<include src="../common/demand_choice/demand_choice.wxml" />
+<view class='content'>
+  <view>
+    <image class="img" src='https://image.3dyida.com/images/main/mudle.png'></image>
+  </view>
+  </view>
+
+  <view class='content'>请登录易打网pc端（http://www.3dyida.com）提交模具制造需求</view>

@@ -1,0 +1,89 @@
+/* pages/mine/mine.wxss */
+@import "../../../font.wxss";
+.content{
+  overflow: hidden;
+  padding-top: 5rpx;
+  padding-bottom: 0
+}
+.mine-header {
+  display: fixed;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+
+.weui-cells {
+  margin-top: 0;
+}
+
+.title {
+  height: 60rpx;
+  background-color: #e0dce0;
+  line-height: 60rpx;
+  padding-left: 25rpx;
+  font-size: 28rpx;
+}
+
+.text-left {
+  position: absolute;
+  margin-top: 50rpx;
+  margin-left: 50rpx;
+  color: white;
+}
+
+.text-right-img {
+  height: 100rpx;
+  width: 100rpx;
+  background-color: red;
+  position: absolute;
+  right: 30rpx;
+}
+
+.text-right {
+  position: absolute;
+  margin-top: -9rpx;
+  margin-left: 460rpx;
+  font-size: 62rpx;
+  color: #999;
+  
+}
+
+.weui-cell {
+  height: 60rpx;
+}
+
+.weui-cell .weui-cell__hd {
+  margin-top: 30rpx;
+}
+.re{
+  position: relative
+}
+.weui-cell .weui-cell__bd {
+  font-size: 32rpx;
+  margin-left: 20rpx;
+  color: #666;
+}
+
+.bottom {
+  margin-top: 170rpx;
+  margin-left: 52rpx;
+}
+
+
+.close {
+  color: white;
+  background-color: #ff9800
+}
+
+.b_d{
+  border-bottom: 3rpx solid #e0dce0;
+}
+input{
+ height:90rpx;
+ line-height:90rpx;
+ width:90%;
+ position: absolute;
+ left:200rpx;
+ bottom:-20rpx;
+}

@@ -1,0 +1,139 @@
+@import "../../common/demand_choice/demand_choice.wxss";
+@import "../../../weui.wxss";
+
+.img {
+  width: 100%;
+  height: 250rpx;
+
+}
+
+.contentitle {
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #e0dce0;
+  color: #2b80ff;
+  font-size: 30rpx;
+  margin-top: -14rpx;
+  padding-left: 25rpx;
+}
+
+.inputname {
+  height: 100rpx;
+  margin-left: 180rpx;
+  font-size: 30rpx;
+  padding-top: 10rpx;
+}
+
+.textcontent {
+  width: 100%;
+  height: 100%;
+  font-size: 30rpx;
+  word-break: break-all;
+}
+
+.personcount {
+  position: relative;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+
+.persontitle {
+  left: 20rpx;
+  position: absolute;
+  font-size: 30rpx;
+}
+
+
+
+.persontype {
+  position: relative;
+  height: 180rpx;
+  width: 100%;
+  border-top: 3rpx solid #e0dce0;
+  border-bottom: 3rp solid #e0dce0;
+  margin-top: 0rpx;
+}
+
+
+.b_d {
+  border-top: 3rpx solid #e0dce0;
+  border-bottom: 20rpx solid #e0dce0;
+
+}
+.imgtitle{
+  font-size: 30rpx
+}
+.weui-cells {
+  margin-top: 0;
+}
+
+.weui-cell .weui-cell__bd {
+  font-size: 32rpx;
+  margin-left: -5rpx;
+}
+
+.text-right {
+  position: absolute;
+  margin-top: -9rpx;
+  margin-left: 460rpx;
+  font-size: 62rpx;
+  color: #999;
+ 
+}
+
+button {
+  margin-top: 50rpx;
+  width: 90%;
+  background-color: #ff9800;
+  color: white;
+}
+
+.weui-cells__title {
+	margin: 0;
+	height: 60rpx;
+	line-height: 60rpx;
+	font-size: 14px;
+  color: black
+}
+.weui-uploader__bd {
+    padding: 30rpx 15px;
+    margin: 0;
+}
+.weui-uploader__file {
+    width: 22%;
+    height: 168rpx;
+    margin-right: 4%;
+    margin-bottom: 14rpx;
+    position: relative;
+}
+.weui-uploader__file .weui-uploader__img  {
+    width: 100%;
+    height: 100%;
+}
+.del-img {
+    width: 100%;
+    height: 20px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .8);
+    position: absolute;
+    bottom: 0;
+}
+.weui-uploader__bd .weui-uploader__input-box {
+    margin: 0;
+}
+.weui-uploader__bd{
+  padding:30rpx 30rpx;
+
+}
+.weui-uploader__input-box{
+  margin-right:10rpx;
+margin-bottom:18rpx;
+width:130rpx;
+height:150rpx;
+
+}
+.weui-uploader__file:nth-child(4n) {
+    margin-right: 0;
+}

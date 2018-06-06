@@ -1,0 +1,63 @@
+<view class='adress' bindtap='adressTo'>
+  <view class='people'>收货人</view>
+  <view class='adresspeople'>
+    <text>{{address.name}}</text>
+    <text>{{address.tel}}</text>
+    <text>{{address.email}}</text>
+    <text style='font-size:50rpx;'>></text>
+  </view>
+  <view class="main-person-address">
+    <image class='iconfont icon-map' style="height:50rpx;width:48rpx;line-height:50rpx;"></image>
+    <text style='padding-top:-20rpx;color:#929292;'>{{address.province}}{{address.city}}{{address.area}}{{address.addressMx}}</text>
+  </view>
+</view>
+
+<view class='invoice'>
+  <view class='fapiao'>发票</view>
+  <view bindtap='editinvoice'>
+    <text>{{invoiceway}}</text>
+    <text style='margin-left:-10rpx'>{{invoiceTitle}}</text>
+    <text style='margin-left:-10rpx'>{{ personname}}</text>
+    <text style='font-size:50rpx;padding-left: 40rpx;'>></text>
+  </view>
+</view>
+<!-- <view class='share'>
+  <view style='font-size:38rpx;margin-top:20rpx;margin-left:30rpx'>是否作为案例分享</view>
+  <view class="sharetype">
+    <radio-group class="radio-group" bindchange="radioChange">
+      <label class="radio" wx:for-items="{{items}}">
+        <radio value="{{item.id}}" checked="{{item.checked}}" id="{{item.id}}" />{{item.value}}
+      </label>
+    </radio-group>
+  </view>
+</view> -->
+<view class='note'>
+  <view style='font-size:30rpx;margin-top:20rpx;margin-left:30rpx'>订单备注</view>
+  <textarea class='textcontent' placeholder='请录入对核订单备注说明（无特殊要求可不填）' bindinput='bindTextArea'>{{textareacontent}}</textarea>
+</view>
+<view class="persontype">
+  <view class="typetitle">选择支付方式</view>
+  <radio-group class="radio-group" style="top:80rpx;">
+    <label class="radio" id="paytype" style="padding-left:14rpx;">
+      <radio checked="true" style="padding-left:60rpx;" />对公转账
+      <radio disabled='true' style="padding-left:60rpx;" />微信支付（暂未开通）
+    </label>
+  </radio-group>
+  <view>
+  </view>
+</view>
+<view class='total'  wx:for="{{orderdets}}" wx:key="index" data-id="{{item.id}}">
+  <view class='amount '>
+    <text class='lf'>总数量</text>
+    <text class='rg'>{{item.qty}}</text>
+  </view>
+  <view class='amount'>
+    <text class='lf'>总金额</text>
+    <text class='rg'>{{item.amount}}</text>
+  </view>
+  <view class='amount'>
+    <text class='lf'>总支付</text>
+    <text class='rg'>{{item.amount}}</text>
+  </view>
+</view>
+<button bindtap='payment'  wx:for="{{orderdets}}">去支付￥{{item.amount}}</button>

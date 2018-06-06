@@ -1,0 +1,23 @@
+<view wx:for="{{address}}">
+  <view class="main-person" catchtap='chooseaddress'  data-id='{{index}}' >
+    <view class="main-person-name" >
+      <text style="font-weight:600">{{item.name}}</text>
+      <text>{{item.tel}}</text>
+      <text>{{item.email}}</text>
+    </view>
+    <view class="main-person-address">
+      <image class='iconfont icon-map' style="height:55rpx;width:45rpx;line-height:50rpx;"></image>
+      <text style='padding-top:-20rpx;color:#929292;'>{{item.province}}{{item.city}}{{item.area}}{{item.addressMx}}</text>
+    </view>
+    <view class="address-edit">
+       <textarea style='margin-left:200rpx;font-size:30rpx;width:200rpx'  disabled='false' value="{{item.isdefault == 'y' ? '默认地址' : ''}}"></textarea>
+      <view class='editaddress'>
+        <text class="iconfont icon-text "></text>
+        <text style="marign-right:30rpx;" catchtap='editaddress' data-id='{{index}}'>编辑</text>
+        <text class="iconfont icon-delete "></text>
+        <text style="margin-right:30rpx" catchtap='deladdress' data-id='{{index}}'>删除</text>
+      </view>
+    </view>
+  </view>
+</view>
+<button bindtap='addAddress'>新建收货地址</button>

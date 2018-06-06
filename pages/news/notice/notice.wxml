@@ -1,0 +1,49 @@
+<view class="main">
+ <scroll-view scroll-top="{{scrollTop}}" scroll-y="true" style="height:{{scrollHeight}}px;" 
+        class="list" bindscrolltolower="bindDownLoad"  >
+  <view class="categroy-header">
+    <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchTab" class="cate-list {{current === index?'on':''}}">{{item.name}}</view>
+  </view>
+  <!-- 系统通知页面 -->
+  <view class="container" class="ma-top-120" wx:for="{{orderlist}}" wx:key="index" data-id="{{item.id}}">
+    <!-- 全部需求详情 -->
+    <view class="details" style="display:{{current == 0 ? 'block' : 'none'}}">
+      <view class="details-top">
+        <text style='font-weight:700;margin-left: 20rpx;'>{{item.title}}</text>
+        <text style='font-size:26rpx;margin-left: 250rpx;'>{{item.createTime}}</text>
+      </view>
+      <view class="details-title" data-id="{{item.id}}">
+        <view class="details-content">
+          <text class="details-image" style=" font-size:24rpx">{{item.details}}</text>
+          <view data-id="{{item.id}}" style='position:relative;left:335rpx;top:84rpx;font-size:30rpx' bindtap="delnotice">
+           <text class="iconfont icon-delete "></text>
+           <text style="margin-right:30rpx" bindtap="delnotice" data-id='{{index}}'>删除</text>
+          </view>
+           
+          <button bindtap="operate">进入操作页</button>
+        </view>
+      </view>
+    </view>
+    <!-- 其他需求状态的内容 -->
+    <view style="display:{{current == 1 ? 'block' : 'none'}}" data-id="{{item.id}}">
+      <view class="details" style="display:{{current == 1 ? 'block' : 'none'}}">
+        <view class="details-top">
+          <text style='font-weight:700;margin-left: 50rpx;'>{{item.title}}</text>
+          <text style='font-size:26rpx;margin-left: 250rpx;'>{{item.releaseTime}}</text>
+        </view>
+        <view class="details-title">
+          <view class="details-content">
+            <text class="details-image" style=" font-size:24rpx">{{item.content}}</text>
+            <button bindtap="godetail" data-id="{{item.id}}">查看公告</button>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+   <view class="body-view">
+        <loading hidden="{{hidden}}" bindchange="loadingChange">
+            加载中...
+        </loading>
+    </view>
+</scroll-view>
+</view>

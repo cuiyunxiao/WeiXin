@@ -1,0 +1,51 @@
+ <view class="content">
+
+  <view class="prompt-area">
+    <view>
+      <text>温馨提示：</text>
+    </view>
+    <text style='font-size:29rpx'>您的订单 <text>({{orderNo}})</text> 对公转账的企业汇款信息已发送手机{{tel}} 请注意查收</text>
+  </view>
+
+  <view class="btn-viewOrder">
+    <button disabled="{{disabled}}" style="background-color:#D6D6D6" formType="submit" bindtap='btnClick'> 查看订单 </button>
+  </view>
+  <view class="interval-area">为您推荐</view>
+
+
+
+  <view class="categroy">
+    <view class="categroy-header">
+      <view wx:for="{{category}}" wx:key="index" data-id="{{item.id}}" data-index="{{index}}" class="cate-list {{current === index?'on':''}}">{{item.name}}</view>
+    </view>
+    <view class="container" class="ma-top-120">
+      <view class="details" style="display:{{current == 0 ? 'block' : 'none'}}">
+        <view class="details-title">
+          <view class='title'>已打印成品为手板，快速设计制造模具</view>
+          <view class='title-content'>
+            <text style='color:#929292;font-size:30rpx'>1.满足产品小批量生产制造需求</text>
+          </view>
+          <view class='title-content'>
+            <text style='color:#929292;font-size:30rpx;'>2.快速组合逼真模型，精度满足要求可3D打印</text>
+          </view>
+
+          <view class="txt-area">
+            <view class="button1">
+              <button disabled="{{disabled}}" style="background-color:#D6D6D6;width:250rpx;" formType="submit" bindtap='btnClick1'> 暂无意向 </button>
+            </view>
+            <view class="button2" style='margin-top:-90rpx;'>
+              <button disabled="{{disabled}}" style="background-color:#ff9800;color:#ffffff;width:250rpx;" formType="submit" bindtap='btnClick2'> 去提交需求 </button>
+            </view>
+          </view>
+        </view>
+      </view>
+
+
+     
+    </view>
+  </view>
+
+
+
+
+</view>

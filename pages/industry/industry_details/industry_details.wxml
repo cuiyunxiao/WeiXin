@@ -1,0 +1,60 @@
+<view class="main" style='margin-bottom:714rpx' wx:for="{{industryReqs}}" wx:key="index" data-index="{{index}}">
+  <view class='title'>
+    <text class='title-name'>工业设计</text>
+    <text class='title-time'>提交时间：{{orderlist.submitTime}}</text>
+  </view>
+  <view class='scaninfo'>
+    <text class='scantitle'>文件信息</text>
+    <image class='scanimg' src='https://image.3dyida.com{{item.attachImg}}'></image>
+    <view class='scancontent'>
+      <view class='linecontent'>名称：
+        <text style='font-size:28rpx;color:#949494'>{{orderlist.title}}</text>
+      </view>
+      <view class='linecontent'>尺寸
+        <text style='font-size:28rpx;color:#949494'>{{item.size}}</text>
+      </view>
+      <view class='linecontent'>功能
+        <text style='font-size:28rpx;color:#949494'>{{item.uses}}</text>
+      </view>
+      <view class='linecontent'>类别
+        <text style='font-size:28rpx;color:#949494'>{{item.category}}</text>
+      </view>
+      <view class='linecontent fl' style='margin-left:-120rpx'>
+        <text> 外形形状：</text>
+        <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.shape}}</text>
+        <text style='padding-left:50rpx'>风格：</text>
+        <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.type}}</text>
+      </view>
+
+    </view>
+    <view class='line' style='top:365rpx'></view>
+    <view class='info'>
+      <view style='margin-left:20rpx'>打印信息</view>
+      <view class='linecontent ' style='padding-left:28rpx'>参考案例：
+        <text style='font-size:28rpx;color:#949494'>{{item.caseUrl}}</text>
+      </view>
+      <view class='linecontent fl'>
+        <text>主色调：</text>
+        <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.color}}</text>
+      </view>
+      <view class='linecontent fl'>
+        <text>格式：</text>
+        <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.type}}</text>
+      </view>
+      <view class='linecontent ' style='padding-left:28rpx'>设计需求概述：
+        <text style='font-size:28rpx;color:#949494'>{{item.note}}</text>
+      </view>
+      <view class='linecontent ' style='padding-left:28rpx'>设计需求描述：
+        <text style='font-size:28rpx;color:#949494'>{{item.description}}</text>
+      </view>
+    </view>
+  </view>
+   <view class='scanaccount' style="display:{{show == 1 ? 'block' : 'none'}}">
+    <view class='money'>
+      <text style='margin-left:30rpx'>总金额</text>
+      <text style='margin-right:30rpx;color:red;'>未报价</text>
+    </view>
+  </view>
+</view>
+
+<button style="display:{{status == 1 ? 'block' : 'none'}}" bindtap='dispose' data-id='{{index}}'>确认需求</button> 

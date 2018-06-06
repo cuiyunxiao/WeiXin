@@ -1,0 +1,35 @@
+<view class='title'>
+  <text class='title-name'>{{orderlist.bizType}}</text>
+  <text class='title-time'>提交时间：{{orderlist.submitTime}}</text>
+</view>
+<view class="main" style='margin-bottom:-8rpx' wx:for="{{phoScanReqs}}" wx:key="index" data-index="{{index}}">
+  <view class='scaninfo'>
+    <text class='scantitle'>建模信息</text>
+    <image class='scanimg'>{{item.attachImg}}</image>
+    <view class='scancontent'>
+      <view>建模名称：
+        <text style='font-size:28rpx;color:#949494'>{{orderlist.title}}</text>
+      </view>
+      <view>精度：
+        <text style='font-size:28rpx;color:#949494'>{{item.accuracy == 'p' ? '普通精度':'高精度'}}</text>
+      </view>
+      <view>建模照片数：
+        <text style='font-size:28rpx;color:#949494'>{{item.qty}}</text>
+      </view>
+      <view>模型是否3D打印:
+        <text style='font-size:28rpx;color:#949494'>是</text>
+      </view>
+    </view>
+  </view>
+  <view class='scanaccount'>
+    <view class='amount'>
+      <text style='margin-left:30rpx'>总数量</text>
+      <text style='margin-right:30rpx;color:red;'>{{item.qty}}件</text>
+    </view>
+    <view class='money'>
+      <text style='margin-left:30rpx'>总金额</text>
+      <text style='margin-right:30rpx;color:red;'>￥{{orderlist.ptotal}}</text>
+    </view>
+  </view>
+</view>
+<button data-id='{{index}}' bindtap='notarize'  disabled="{{disabled}}" style="background-color:{{loginBtnBgBgColor}}"   loading="{{btnLoading}}" >{{loginBtnTxt}}</button> 

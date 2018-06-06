@@ -1,0 +1,62 @@
+<scroll-view>
+<view class="main">
+  <view class="main-zhaungtai">当前订单状态：{{order.paystatus == "n"?"待支付":"已支付"}}</view>
+  <view class="main-person">
+    <view class="main-person-name">
+      <text style="font-weight:600">{{address.name}}</text>
+      <text>{{address.tel}}</text>
+      <text>{{address.email}}</text>
+    </view>
+    <view class="main-person-address">
+      <image class='iconfont icon-map' style="height:50rpx;width:46rpx;line-height:50rpx;"></image>
+      <text style='margin-top:-30rpx;color:#929292;'>{{address.province}}{{address.city}}{{address.area}}{{address.addressMx}}</text>
+    </view>
+  </view>
+  <view class="main-detail" >
+    <view class="main-detail-title">
+      <text style="font-size: 28rpx;font-weight: 600;" wx:for="{{products}}">{{item.bizType}}</text>
+      <text style="font-size: 28rpx;color:#929292;" wx:for="{{products}}">提交时间：{{item.submitTime}}</text>
+    </view>
+    <view class="main-detail-content" wx:for="{{dataList}}">
+      <image class="main-detail-img" src='https://image.3dyida.com{{item.attachImg}}'> </image>
+      <text class="detail-img-title" style=' font-size: 28rpx;'>{{attachName}}</text>
+      <text class="detail-img-num;" style=' font-size: 28rpx;color:#969696'>数量：{{item.qty}}</text>
+      <text class="detail-img-pic" style=' font-size: 28rpx;color:#969696'>单价：￥{{item.price}}</text>
+      <text class="detail-img-tottle" style="font-size: 28rpx;display:{{item.qty == true? 'block' : 'none'}}">金额：￥{{item.qty*item.price}}</text>
+       <text class="detail-img-tottle" style="font-size: 28rpx;display:{{item.ytotal == true? 'block' : 'none'}}" wx:for="{{products}}">金额：￥{{item.ytotal}}</text>
+    </view>
+  </view>
+
+  <view class="detail-order" wx:for="{{orderdets}}">
+    <view class="detail-order-num">订单编号：{{item.orderNo}}</view>
+    <view class="detail-order-type">订单类型：全额订单</view>
+    <view class="detail-order-num">支付方式：对公转账</view>
+  </view>
+  <view class="detail-form">
+    <view class="detail-order-num">发票类型：{{invoice.type == "p"?"纸质普通发票":"纸质增值发票"}}</view>
+    <view class="detail-order-type">发票抬头：{{invoice.account.accountName}}</view>
+    <view class="detail-order-type">纳税人识别号：094466667777k</view>
+  </view>
+  <view class="detail-form" style="border-bottom:20rpx solid #d6d4d6;">
+    <view class="detail-order-num">订单备注：{{order.remarkMsg}}</view>
+  </view>
+  <view class="detail-sum">
+    <view class='detail-sum-amount'>
+      <text style="font-size:30rpx">总数量</text>
+      <text style="font-size:30rpx;color:#e51c23;font-weight:600;margin-right:30rpx">{{order.pcount}}</text>
+    </view>
+    <view class='detail-sum-amount'>
+      <text style="font-size:30rpx">总金额</text>
+      <text style="font-size:30rpx;color:#e51c23;font-weight:600;margin-right:30rpx">￥{{order.ptotal}}</text>
+    </view>
+  </view>
+  <view class="detail-payment">
+    <text style="font-size:30rpx">实付款</text>
+    <text style="font-size:30rpx;color:#e51c23;font-weight:600;margin-right:30rpx">￥{{order.ptotal}}</text>
+  </view>
+
+</view>
+</scroll-view>
+<view class="bottom">
+  <!-- <view class="bottom-btw" bindtap='cuidan'>催单</view> -->
+</view>

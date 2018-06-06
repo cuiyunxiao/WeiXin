@@ -1,0 +1,79 @@
+ <view class='title'>
+    <text class='title-name'>{{orderlist.bizType}}</text>
+    <text class='title-time'>提交时间：{{orderlist.submitTime}}</text>
+  </view>
+<view class="main"  wx:for="{{printReqs}}" wx:key="index" data-index="{{index}}">
+  <checkbox-group bindchange="checkboxChange" data-id='{{index}}'>
+     <label class="checkbox">
+  <view >
+    <view class='scaninfo' data-id="{{item.id}}">
+      <text class='scantitle'>文件信息</text>
+        <checkbox checked='{{item.selected}}' />
+      <image class='scanimg' src='https://image.3dyida.com{{item.attachImg}}'></image>
+      <view class='scancontent'>
+        <view class='linecontent'>名称：
+          <text style='font-size:28rpx;color:#949494'>{{item.attachName}}</text>
+        </view>
+        <view class='linecontent'>尺寸
+          <text style='font-size:28rpx;color:#949494'>{{item.size}}</text>
+        </view>
+        <view class='linecontent'>体积
+          <text style='font-size:28rpx;color:#949494'>0</text>
+        </view>
+        <view class='linecontent'>表面体积
+          <text style='font-size:28rpx;color:#949494'>0</text>
+        </view>
+      </view>
+      <view class='line'></view>
+      <view class='info'>
+        <view>打印信息</view>
+         <view class='linecontent ' style='padding-left:28rpx'>材料
+          <text style='font-size:28rpx;color:#949494'>{{item.material.name}}</text>
+        </view>
+        <view class='linecontent fl'>
+          <text> 颜色：</text>
+          <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.color}}</text>
+          <text style='padding-left:50rpx'>填充：</text>
+          <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.isfill == 0 ? '空心' : '实心'}}</text>
+        </view>
+        <view class='linecontent fl '>
+          <text>加工工艺：</text>
+          <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.material.characteristic}}</text>
+          <text style='padding-left:50rpx'>是否小批量</text>
+          <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.isBatch == 0 ? '否':'是'}}</text>
+        </view>
+        <view class='linecontent ' style='padding-left:28rpx'>备注
+          <text style='font-size:28rpx;color:#949494'></text>
+        </view>
+      </view>
+    </view>
+  </view>
+   <view class='scanaccount' >
+    <view class='count'>
+      <text style='margin-left:30rpx'>数量</text>
+      <text style='margin-right:30rpx;color:red;'>{{item.qty}}</text>
+    </view>
+     <view class='money'>
+      <text style='margin-left:30rpx'>单价</text>
+      <text style='margin-right:30rpx;color:red;'>{{item.price}}</text>
+    </view>
+  </view>
+   </label>
+    </checkbox-group>
+</view>
+<view class="cart-footer">
+  <icon wx:if="{{selectAllStatus}}" type="success_circle" color="red" class="total-select" bindtap="selectAll" />
+  <icon wx:else type="circle" color="#fff" class="total-select" bindtap="selectAll" />
+  <text style='margin-left:10rpx;font-size:34rpx;margin-top:20rpx'>全选</text>
+</view>
+<view class='cart-total'>
+  <view>
+    <text class='pl'>总数量</text>
+    <text class='pr'>{{totalquantity}}件</text>
+  </view>
+  <view>
+    <text class='pl'>总金额</text>
+    <text class='pr'>￥{{totalPrice}}</text>
+  </view>
+</view>
+<button data-id='{{index}}' bindtap='notarize'  disabled="{{disabled}}" style="background-color:{{loginBtnBgBgColor}}"   loading="{{btnLoading}}" >{{loginBtnTxt}}</button> 

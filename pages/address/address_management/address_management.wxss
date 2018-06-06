@@ -1,0 +1,34 @@
+ @import'../../order/orderdetail/orderdetail';
+@import "../../../font.wxss";
+
+.main-person-address{
+  border-bottom: 3rpx solid #e0dce0;
+  margin-left: -10rpx
+}
+.icon-map{
+   margin-left: 30rpx
+}
+.main-person{
+  height: 250rpx
+}
+.address-edit{
+  margin-top: 25rpx;
+  margin-left: -120rpx;
+  height: 80rpx
+}
+.address-icon {
+  width: 100rpx;
+} 
+.icon-text{
+  margin-left: 500rpx
+}
+.icon-delete{
+  margin-left: 30rpx
+}
+button{
+margin-top: 100rpx;
+background-color: #ff9800;
+color: white
+}
+.address-edit{position: relative}
+.editaddress{position: absolute;top:4rpx}

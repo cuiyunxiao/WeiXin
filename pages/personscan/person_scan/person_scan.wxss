@@ -1,0 +1,131 @@
+@import "../../common/demand_choice/demand_choice.wxss";
+
+.img {
+  width: 100%;
+  height: 250rpx;
+
+}
+.contentitle {
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #e0dce0;
+  color: #2b80ff;
+  font-size: 30rpx;
+  margin-top: -14rpx;
+  padding-left: 25rpx;
+}
+
+/*主容器*/
+
+.stepper {
+  width: 80px;
+  height: 26px;
+  /*给主容器设一个边框*/
+  border: 1px solid #e0dce0;
+  border-radius: 3px;
+}
+
+/*加号和减号*/
+
+.stepper text {
+  width: 19px;
+  line-height: 26px;
+  text-align: center;
+  float: left;
+}
+
+/*数值*/
+
+.stepper input {
+  width: 40px;
+  height: 26px;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  /*给中间的input设置左右边框即可*/
+  border-left: 1px solid #e0dce0;
+  border-right: 1px solid #e0dce0;
+}
+
+/*普通样式*/
+
+.stepper .normal {
+  color: black;
+}
+
+/*禁用样式*/
+
+.stepper .disabled {
+  color: #e0dce0;
+}
+
+.personcount {
+  position: relative;
+  height: 120rpx;
+  line-height: 120rpx;
+
+  
+}
+
+.persontitle {
+  left: 20rpx;
+  position: absolute;
+  font-size: 30rpx
+}
+
+.stepper {
+  right: 20rpx;
+  position: absolute;
+  top:30rpx
+}
+.persontype{
+  position: relative;
+  height: 150rpx;
+  width: 100%;
+    border-top: 3rpx solid #e0dce0;
+  border-bottom: 3rp solid #e0dce0;
+  margin-top: 0rpx
+}
+.typetitle{
+  position: absolute;
+  top: 20rpx;
+  left: 20rpx ;
+   font-size: 30rpx
+}
+.radio-group{
+  position: absolute;
+  top:80rpx;
+  right: 60rpx;
+   font-size: 30rpx;
+ 
+}
+label{
+  padding-right: 50rpx
+}
+.b_d{
+   border-top: 3rpx solid #e0dce0;
+  border-bottom: 20rpx solid #e0dce0;
+}
+
+.weui-cells {
+  margin-top: 0;
+}
+.weui-cell .weui-cell__bd {
+  font-size: 32rpx;
+  margin-left: -5rpx;
+
+}
+.text-right {
+  position: absolute;
+  margin-top: -9rpx;
+  margin-left: 460rpx;
+  font-size: 62rpx;
+  color: #999;
+}
+button{
+  margin-top: 50rpx;
+  width: 90%;
+  background-color: #ff9800;
+  color: white
+}

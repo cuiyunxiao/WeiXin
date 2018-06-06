@@ -1,0 +1,151 @@
+@import "../../../font.wxss";
+.main-zhaungtai {
+  height: 100rpx;
+  width: 100%;
+  background-color: #d6d4d6;
+  font-size: 28rpx;
+  font-weight: 600;
+  margin-top: 20rpx;
+  border-bottom: 3rpx solid #d6d4d6;
+  border-top: 3rpx solid #d6d4d6;
+  display: flex;
+  line-height: 100rpx;
+  padding-left: 30rpx;
+}
+
+.main-person {
+  height: 160rpx;
+  width: 100%;
+  border-bottom: 20rpx solid #d6d4d6;
+  border-top: 3rpx solid #d6d4d6;
+}
+
+.main-person text {
+  font-size: 28rpx;
+  font-weight: 500;
+}
+
+.main-person-name {
+  margin-left: 25rpx;
+}
+
+.main-person-address {
+  margin-left: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+text {
+  padding-left: 20rpx;
+}
+
+.main-detail-title {
+  height: 100rpx;
+  border-bottom: 3rpx solid #d6d4d6;
+  line-height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.main-detail-content {
+  height: 170rpx;
+  line-height: 200rpx;
+  background-color: #eae1f7;
+  position: relative;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+}
+
+.main-detail-img {
+  width: 140rpx;
+  height: 140rpx;
+  margin-left: 10rpx;
+  margin-top: 15rpx;
+
+}
+
+.detail-img-title {
+  position: absolute;
+  margin-left: 50rpx;
+  margin-top: -50rpx;
+}
+
+.detail-img-num {
+  position: absolute;
+  margin-left: 50rpx;
+  margin-bottom: 70rpx;
+}
+
+.detail-img-pic {
+  position: absolute;
+  margin-left: 180rpx;
+  margin-bottom: 70rpx;
+}
+
+.detail-img-tottle {
+  position: absolute;
+  margin-left: 400rpx;
+  margin-top: 40rpx;
+}
+
+.detail-order {
+  margin-top: 20rpx;
+  border-top: 20rpx solid #d6d4d6;
+}
+
+.detail-order-num {
+  font-size: 28rpx;
+  color: #929292;
+  margin-left: 50rpx;
+  margin-top: 20rpx;
+}
+
+.detail-order-type {
+  font-size: 28rpx;
+  color: #929292;
+  margin-left: 50rpx;
+  margin-top: 25rpx;
+}
+
+.detail-form {
+  border-top: 3rpx solid #d6d4d6;
+}
+
+.detail-sum {
+  border-bottom: 6rpx solid #d6d4d6;
+  height: 150rpx;
+}
+
+.detail-sum-amount {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15rpx;
+}
+
+.detail-payment {
+  margin-left: 522rpx;
+  height: 180rpx;
+  margin-top: 15rpx
+}
+
+.bottom {
+  margin-top: 200rpx;
+  height: 100rpx;
+  width: 100%;
+  background-color: #e8e6e8;
+  position: fixed;
+  bottom: 0rpx;
+}
+
+.bottom-btw {
+  border: 2rpx solid #bbb;
+  height: 70rpx;
+  width: 200rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #fff;
+  font-size: 28rpx;
+  border-radius: 6%;
+  margin-left: 520rpx;
+  margin-top: 15rpx
+}

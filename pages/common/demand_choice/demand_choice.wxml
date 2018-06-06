@@ -1,0 +1,18 @@
+<scroll-view class="header" scroll-y="{{isScroll}}">
+  <scroll-view scroll-x="true" class="headScroll">
+    <block wx:for="{{newHeadList}}" >
+      <text bindtap="headAction" data-id="{{index}}" class="newHead {{index == headSelect ? 'selectState':''}}">{{item}}</text>
+    </block>
+  </scroll-view>
+  <view class='blocks' catchtap="taggle"></view>
+  <text class="arrows {{flag? 'arrows_down' : 'arrows_up'}}"  data-flag="true"></text>
+</scroll-view>
+<!-- 遮罩层 -->
+
+<scroll-view class="b1" hidden='{{cover}}'  catchtouchmove="preventD">
+  <view class="coverhead">
+   <block wx:for="{{HeadList}}" wx:key="">
+      <text bindtap="headAction" data-id="{{index}}" class="covernewHead {{index == headSelect ? 'coverselectState':''}}">{{item}}</text>
+    </block>
+  </view>
+</scroll-view>

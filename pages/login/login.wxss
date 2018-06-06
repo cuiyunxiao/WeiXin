@@ -1,0 +1,81 @@
+/*.myprogress{margin:5px 0}*/
+@import "../../font.wxss";
+.content {
+  text-align: center;
+}
+
+.userinfo {
+  margin-top: 100rpx;
+  margin-bottom: 100rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.userinfo-avatar {
+  width: 400rpx;
+  height:350rpx;
+  margin: -50rpx;
+ 
+}
+
+.userinfo-logIcon{
+  width: 80rpx;
+  height: 80rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+  text-align: center
+}
+
+.userinfo-verifiIcon{
+  width: 60rpx;
+  height: 60rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.input-log{
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  flex-direction: row;
+}
+
+.input-area {
+  background-color: #f2f2f2;
+  text-align: left;
+  border-top: 1px solid #ddd;
+}
+
+.input-area input {
+  height: 100rpx;
+  line-height: 100rpx;
+}
+
+.btn-area {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn-area button {
+  margin-top: 40rpx;
+  color: #f2f2f2;
+}
+
+.txt-area {
+  margin-top: 30rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx;
+}
+
+.forgot-password {
+  color: #888;
+}
+
+.register {
+  color: #f90;
+}
+
+.forgot-password:active, .register:active {
+  opacity: 0.7;
+}

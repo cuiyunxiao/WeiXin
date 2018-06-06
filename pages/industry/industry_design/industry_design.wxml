@@ -1,0 +1,66 @@
+
+<view class='title'>
+  <text class='title-name'>{{orderlist.bizType}}</text>
+  <text class='title-time'>提交时间：{{orderlist.submitTime}}</text>
+</view>
+<view class="main" style='margin-bottom:-8rpx' wx:for="{{industryReqs}}" wx:key="index" data-index="{{index}}">
+<view class='scaninfo'>
+  <text class='scantitle'>设计信息</text>
+  <image class='scanimg' src='https://image.3dyida.com{{item.attachImg}}'></image>
+  <view class='scancontent'>
+    <view class='linecontent'>设计主题：
+      <text style='font-size:28rpx;color:#949494'>{{inputname}}</text>
+    </view>
+    <view class='linecontent'>类别：
+      <text style='font-size:28rpx;color:#949494'>{{item.category}}</text>
+    </view>
+    <view class='linecontent'>外形形状：
+      <text style='font-size:28rpx;color:#949494'>{{item.description}}</text>
+    </view>
+</view>
+<view class='info'>
+     <view class='linecontent fl'>
+     <text> 功能：</text>
+      <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.uses}}</text>
+      <text style='padding-left:50rpx'>色调：</text>
+ <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.color}}</text>
+    </view>
+     <view class='linecontent fl '>
+     <text> 尺寸：</text>
+      <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.size}}</text>
+      <text style='padding-left:50rpx'>格式：</text>
+ <text style='font-size:28rpx;color:#949494;margin-left:10rpx'>{{item.type}}</text>
+    </view>
+     <view class='linecontent ' style='padding-left:28rpx'>参考案例：
+      <text style='font-size:28rpx;color:#949494'>{{item.caseUrl}}</text>
+    </view>
+     <view class='linecontent 'style='padding-left:28rpx'>设计需求概述：
+      <text style='font-size:28rpx;color:#949494'>{{item.note}}</text>
+    </view>
+     <view class='linecontent 'style='padding-left:28rpx;border-bottom:15rpx solid #ccc8cc'>设计需求：
+      <text style='font-size:28rpx;color:#949494'>{{item.description}}</text>
+   </view>
+  </view>
+</view>
+
+<view class='scanaccount'>
+<view style='font-size:34rpx;padding:30rpx 0 0 30rpx'>付款信息</view>
+<view class='amount'>
+    <text style='margin-left:60rpx'>付款方式</text>
+    <text style='margin-right:30rpx;color:red;'>定金&尾款</text>
+  </view>
+  <view class='amount'>
+    <text style='margin-left:60rpx'>总金额</text>
+    <text style='margin-right:30rpx;color:red;'>{{orderlist.ptotal}}</text>
+  </view>
+  <view class='amount'>
+    <text style='margin-left:60rpx'>定金</text>
+    <text style='margin-right:30rpx;color:red;'>{{orderlist.depositPay}}</text>
+  </view>
+  <view class='money'>
+    <text style='margin-left:60rpx'>尾款</text>
+    <text style='margin-right:30rpx;color:red;'>￥{{orderlist.balancePay}}</text>
+  </view>
+</view>
+</view>
+<button data-id='{{index}}' bindtap='notarize'  disabled="{{disabled}}" style="background-color:{{loginBtnBgBgColor}}"   loading="{{btnLoading}}" >{{loginBtnTxt}}</button> 

@@ -1,0 +1,29 @@
+<view class="content">
+    <view class = "logo">
+        <image mode="aspectFit"  src="../../images/timg.jpg"></image>
+    </view>
+    <form bindsubmit="formSubmit">
+        <view class="input-area">
+        <view class="input-log">  
+          <image class="userinfo-logIcon iconfont icon-account" ></image>  
+          <input id="username" name="username" maxlength='11' type="text"  placeholder="手机号" bindchange="setPhoneNum" />
+        </view>  
+          <view class="smsCode">
+            <text class="userinfo-logIcon iconfont  icon-security" ></text>
+            <input id="smsCode" name="smsCode" maxlength='4' type="text" placeholder="验证码" bindchange="setSmsCode" />
+            <button bindtap = "getSmsCode" disabled="{{smsCodeDisabled}}" style="background-color:{{getSmsCodeBtnColor}}"   class="getSmsCodeBtn">{{getSmsCodeBtnTxt}}</button>
+          </view>
+          <view class="input-log">  
+            <image class="userinfo-logIcon iconfont icon-password" ></image>
+            <input id="password" name="password" maxlength='20' type="password" placeholder="新密码" bindchange="setPassword" />
+          </view>
+        </view>
+        <view class="btn-area">
+            <button  disabled="{{registDisabled}}" style="background-color:{{registBtnBgBgColor}}"   formType="submit"  loading="{{btnLoading}}"> {{registBtnTxt}} </button>
+            <view class="txt-area">
+                 <navigator redirect url="../register/register"><text class="forgot-password">注册账号</text></navigator>
+                 <navigator redirect url="../login/login"><text class="register">登录账号</text></navigator>
+            </view>
+        </view>
+    </form>
+</view>
